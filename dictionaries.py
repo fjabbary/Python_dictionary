@@ -23,7 +23,6 @@ print(restaurant_menu)
 # ======= Functions ======== 
 
 service_tickets = {}
-ticket_id = 0
 
 def add_ticket(tickets):
   ticket = {}
