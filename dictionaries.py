@@ -2,23 +2,25 @@
 # =============|| Task 1 ||===============
 # ========================================
 
-# restaurant_menu = {
-#     "Starters": {"Soup": 5.99, "Bruschetta": 6.50},
-#     "Main Course": {"Steak": 15.99, "Salmon": 13.99},
-#     "Desserts": {"Cake": 4.99, "Ice Cream": 3.99}
-# }
+restaurant_menu = {
+    "Starters": {"Soup": 5.99, "Bruschetta": 6.50},
+    "Main Course": {"Steak": 15.99, "Salmon": 13.99},
+    "Desserts": {"Cake": 4.99, "Ice Cream": 3.99}
+}
 
-# restaurant_menu["Beverageges"] = ["Juice", "Coca-cola", "Sparkling Water"]
-# restaurant_menu["Main Course"]["Steak"] = 17.99
-# restaurant_menu["Starters"].pop("Bruschetta")
+restaurant_menu["Beverageges"] = ["Juice", "Coca-cola", "Sparkling Water"]
+restaurant_menu["Main Course"]["Steak"] = 17.99
+restaurant_menu["Starters"].pop("Bruschetta")
 
-# print(restaurant_menu)
+print(restaurant_menu)
 
 
 
 # ========================================
 # =============|| Task 2 ||===============
 # ========================================
+
+# ======= Functions ======== 
 
 service_tickets = {}
 ticket_id = 0
@@ -55,7 +57,6 @@ def update_ticket(tickets):
     else:
       tickets[id]["status"] = "open"  
   
-
   
 def display_tickets(tickets):
   filter_criteria = input("Enter 'all' to view all tickets, Enter 'open' to view tickets with open , 'closed' to view tickets with closed status: ") 
@@ -69,7 +70,6 @@ def display_tickets(tickets):
       if v['status'] == 'open':
           filtered_dict.update({k: v})
     print("\033[93m", filtered_dict, "\033[0m")       
-    
         
   elif filter_criteria == 'closed':
     filtered_dict = {}
@@ -79,11 +79,7 @@ def display_tickets(tickets):
     print("\033[93m", filtered_dict, "\033[0m")   
   
   
-  
-  
-  
-  
-
+# ====================== Run App ==================== 
 def manage_tickets():
   while True:
     action = input("Choose action: \nadd \nupdate \ndisplay \nquit\n: ")
