@@ -47,7 +47,7 @@ def add_ticket(tickets):
   print("\033[94m", service_tickets, "\033[0m")   
   
   
-# By updating I assume function toggles the status of the targeted ticke.    
+# By updating I assume function toggles the status of the targeted ticket.    
 def update_ticket(tickets):
     id = input("Enter the id of ticket you want to update? ")
     status = tickets[id]["status"]
@@ -58,7 +58,7 @@ def update_ticket(tickets):
   
   
 def display_tickets(tickets):
-  filter_criteria = input("Enter 'all' to view all tickets, Enter 'open' to view tickets with open , 'closed' to view tickets with closed status: ") 
+  filter_criteria = input("Enter 'all' to view all tickets, Enter 'open' to view tickets with open status, 'closed' to view tickets with closed status: ") 
   
   if filter_criteria == 'all':
     print("\033[93m", tickets, "\033[0m") 
